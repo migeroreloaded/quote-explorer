@@ -107,10 +107,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to search quotes based on the search term
     function searchQuotes(searchTerm, genre) {
         // Fetch quotes from the API
-        return getQuotes()
+        // return getQuotes()
+        return fetch('../db.json')
+            .then(response => response.json())
             .then(quotes => {
                 // Filter quotes based on the search term and genre
-                let filteredQuotes = quotes.data.filter(quote => {
+                // let filteredQuotes = quotes.data.filter(quote => {
+                let filteredQuotes = quotes.genres.filter(quote => {
                     const matchSearchTerm = quote.quoteText.toLowerCase().includes(searchTerm.toLowerCase());
                     const matchGenre = genre === 'All genres' || quote.quoteGenre.toLowerCase() === genre.toLowerCase();
                     return matchSearchTerm && matchGenre;
