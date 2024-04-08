@@ -66,18 +66,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // Call the getGenres function when page loads
     getGenres()
     .then(genres => {
-       populateGenresFilter(genres); 
+       populateGenresFilter(['All genres', ...genres]); 
     })
 
     // Add event listener to form
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('searchInput');
+    const genresFilter = document.getElementById('genresFilter');
 
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const searchTerm = searchInput.value.trim();
+        const selectedGenre = genresFilter.value.trim();
 
-        searchQuotes(searchTerm)
+        searchQuotes(searchTerm, selectedGenre)
             .then(filteredQuotes => {
                 // Display the filtered quotes
                 const quoteDisplay = document.getElementById('quoteDisplay');
@@ -103,13 +105,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Function to search quotes based on the search term
-    function searchQuotes(searchTerm) {
+    function searchQuotes(searchTerm, genre) {
         // Fetch quotes from the API
         return getQuotes()
             .then(quotes => {
-                // Filter quotes based on the search term
-                const filteredQuotes = quotes.data.filter(quote => {
-                    return quote.quoteText.toLowerCase().includes(searchTerm.toLowerCase());
+                // Filter quotes based on the search term and genre
+                let filteredQuotes = quotes.data.filter(quote => {
+                    const matchSearchTerm = quote.quoteText.toLowerCase().includes(searchTerm.toLowerCase());
+                    const matchGenre = genre === 'All genres' || quote.quoteGenre.toLowerCase() === genre.toLowerCase();
+                    return matchSearchTerm && matchGenre;
                 });
                 return filteredQuotes;
             })
@@ -120,3 +124,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
+  
