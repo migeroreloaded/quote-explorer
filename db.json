@@ -1,0 +1,484 @@
+{ 
+    "genres": [
+        {
+        "id": 1,
+        "quoteText": "The only way to do great work is to love what you do.",
+        "quoteAuthor": "Steve Jobs",
+        "quoteGenre": "Inspirational"
+        },
+        {
+        "id": 2,
+        "quoteText": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "quoteAuthor": "Winston Churchill",
+        "quoteGenre": "Motivational"
+        },
+        {
+        "id": 3,
+        "quoteText": "In the end, it's not the years in your life that count. It's the life in your years.",
+        "quoteAuthor": "Abraham Lincoln",
+        "quoteGenre": "Life"
+        },
+        {
+        "id": 4,
+        "quoteText": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "quoteAuthor": "Franklin D. Roosevelt",
+        "quoteGenre": "Inspirational"
+        },
+        {
+        "id": 5,
+        "quoteText": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        "quoteAuthor": "Nelson Mandela",
+        "quoteGenre": "Motivational"
+        },
+        {
+        "id": 6,
+        "quoteText": "Age is an issue of mind over matter. If you don't mind, it doesn't matter.",
+        "quoteAuthor": "Mark Twain",
+        "quoteGenre": "Age"
+        },
+        {
+        "id": 7,
+        "quoteText": "Sometimes, you need to be alone. Not to be lonely, but to enjoy your free time being yourself.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Alone"
+        },
+        {
+        "id": 8,
+        "quoteText": "Life is amazing. Don't waste it being sad, be who you are, be happy, be free, be whatever you want to be.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Amazing"
+        },
+        {
+        "id": 9,
+        "quoteText": "For every minute you are angry you lose sixty seconds of happiness.",
+        "quoteAuthor": "Ralph Waldo Emerson",
+        "quoteGenre": "Anger"
+        },
+        {
+        "id": 10,
+        "quoteText": "Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Anniversary"
+        },
+        {
+        "id": 11,
+        "quoteText": "Architecture should speak of its time and place, but yearn for timelessness.",
+        "quoteAuthor": "Frank Gehry",
+        "quoteGenre": "Architecture"
+        },
+        {
+        "id": 12,
+        "quoteText": "Art enables us to find ourselves and lose ourselves at the same time.",
+        "quoteAuthor": "Thomas Merton",
+        "quoteGenre": "Art"
+        },
+        {
+        "id": 13,
+        "quoteText": "Your attitude, not your aptitude, will determine your altitude.",
+        "quoteAuthor": "Zig Ziglar",
+        "quoteGenre": "Attitude"
+        },
+        {
+        "id": 14,
+        "quoteText": "Beauty begins the moment you decide to be yourself.",
+        "quoteAuthor": "Coco Chanel",
+        "quoteGenre": "Beauty"
+        },
+        {
+        "id": 15,
+        "quoteText": "The best way to predict the future is to create it.",
+        "quoteAuthor": "Peter Drucker",
+        "quoteGenre": "Best"
+        },
+        {
+        "id": 16,
+        "quoteText": "Your birthday is a special time to celebrate the gift of 'you' to the world.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Birthday"
+        },
+        {
+        "id": 17,
+        "quoteText": "The entrepreneur always searches for change, responds to it, and exploits it as an opportunity.",
+        "quoteAuthor": "Peter Drucker",
+        "quoteGenre": "Business"
+        },
+        {
+        "id": 18,
+        "quoteText": "The cars we drive say a lot about us.",
+        "quoteAuthor": "Alexandra Paul",
+        "quoteGenre": "Car"
+        },
+        {
+        "id": 19,
+        "quoteText": "Change your thoughts and you change your world.",
+        "quoteAuthor": "Norman Vincent Peale",
+        "quoteGenre": "Change"
+        },
+        {
+        "id": 20,
+        "quoteText": "Good communication is just as stimulating as black coffee, and just as hard to sleep after.",
+        "quoteAuthor": "Anne Morrow Lindbergh",
+        "quoteGenre": "Communication"
+        },
+        {
+        "id": 21,
+        "quoteText": "The computer was born to solve problems that did not exist before.",
+        "quoteAuthor": "Bill Gates",
+        "quoteGenre": "Computers"
+        },
+        {
+        "id": 22,
+        "quoteText": "The only way out of the labyrinth of suffering is to forgive.",
+        "quoteAuthor": "John Green",
+        "quoteGenre": "Forgiveness"
+        },
+        {
+        "id": 23,
+        "quoteText": "The secret of change is to focus all of your energy, not on fighting the old, but on building the new.",
+        "quoteAuthor": "Socrates",
+        "quoteGenre": "Future"
+        },
+        {
+        "id": 24,
+        "quoteText": "Gardening is the purest of human pleasures.",
+        "quoteAuthor": "Francis Bacon",
+        "quoteGenre": "Gardening"
+        },
+        {
+        "id": 25,
+        "quoteText": "God could not be everywhere, and therefore he made mothers.",
+        "quoteAuthor": "Rudyard Kipling",
+        "quoteGenre": "God"
+        },
+        {
+        "id": 26,
+        "quoteText": "Good things come to those who wait.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Good"
+        },
+        {
+        "id": 27,
+        "quoteText": "The ignorance of one voter in a democracy impairs the security of all.",
+        "quoteAuthor": "John F. Kennedy",
+        "quoteGenre": "Government"
+        },
+        {
+        "id": 28,
+        "quoteText": "A graduation ceremony is an event where the commencement speaker tells thousands of students dressed in identical caps and gowns that 'individuality' is the key to success.",
+        "quoteAuthor": "Robert Purvis",
+        "quoteGenre": "Graduation"
+        },
+        {
+        "id": 29,
+        "quoteText": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "quoteAuthor": "Franklin D. Roosevelt",
+        "quoteGenre": "Great"
+        },
+        {
+        "id": 30,
+        "quoteText": "Happiness is not something ready-made. It comes from your own actions.",
+        "quoteAuthor": "Dalai Lama",
+        "quoteGenre": "Happiness"
+        },
+        {
+        "id": 31,
+        "quoteText": "The groundwork of all happiness is health.",
+        "quoteAuthor": "Leigh Hunt",
+        "quoteGenre": "Health"
+        },
+        {
+        "id": 32,
+        "quoteText": "History is a relentless master. It has no present, only the past rushing into the future.",
+        "quoteAuthor": "John F. Kennedy",
+        "quoteGenre": "History"
+        },
+        {
+        "id": 33,
+        "quoteText": "A house is made of walls and beams; a home is built with love and dreams.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Home"
+        },
+        {
+        "id": 34,
+        "quoteText": "Hope is the thing with feathers that perches in the soul and sings the tune without the words and never stops at all.",
+        "quoteAuthor": "Emily Dickinson",
+        "quoteGenre": "Hope"
+        },
+        {
+        "id": 35,
+        "quoteText": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.",
+        "quoteAuthor": "Albert Einstein",
+        "quoteGenre": "Imagination"
+        },
+        {
+        "id": 36,
+        "quoteText": "Your life does not get better by chance, it gets better by change.",
+        "quoteAuthor": "Jim Rohn",
+        "quoteGenre": "Inspirational"
+        },
+        {
+        "id": 37,
+        "quoteText": "Jealousy is a disease, love is a healthy condition. The immature mind often mistakes one for the other, or assumes that the greater the love, the greater the jealousy.",
+        "quoteAuthor": "Robert A. Heinlein",
+        "quoteGenre": "Jealousy"
+        },
+        {
+        "id": 38,
+        "quoteText": "The only source of knowledge is experience.",
+        "quoteAuthor": "Albert Einstein",
+        "quoteGenre": "Knowledge"
+        },
+        {
+        "id": 39,
+        "quoteText": "Leadership is not about being in charge. It's about taking care of those in your charge.",
+        "quoteAuthor": "Simon Sinek",
+        "quoteGenre": "Leadership"
+        },
+        {
+        "id": 40,
+        "quoteText": "The beautiful thing about learning is that no one can take it away from you.",
+        "quoteAuthor": "B.B. King",
+        "quoteGenre": "Learning"
+        },
+        {
+        "id": 41,
+        "quoteText": "The more laws, the less justice.",
+        "quoteAuthor": "Marcus Tullius Cicero",
+        "quoteGenre": "Legal"
+        },
+        {
+        "id": 42,
+        "quoteText": "To live is the rarest thing in the world. Most people exist, that is all.",
+        "quoteAuthor": "Oscar Wilde",
+        "quoteGenre": "Life"
+        },
+        {
+        "id": 43,
+        "quoteText": "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+        "quoteAuthor": "Lao Tzu",
+        "quoteGenre": "Love"
+        },
+        {
+        "id": 44,
+        "quoteText": "A successful marriage requires falling in love many times, always with the same person.",
+        "quoteAuthor": "Mignon McLaughlin",
+        "quoteGenre": "Marriage"
+        },
+        {
+        "id": 45,
+        "quoteText": "The good physician treats the disease; the great physician treats the patient who has the disease.",
+        "quoteAuthor": "William Osler",
+        "quoteGenre": "Medical"
+        },
+        {
+        "id": 46,
+        "quoteText": "Money is not the most important thing in the world. Love is. Fortunately, I love money.",
+        "quoteAuthor": "Jackie Mason",
+        "quoteGenre": "Money"
+        },
+        {
+        "id": 47,
+        "quoteText": "The early morning has gold in its mouth.",
+        "quoteAuthor": "Benjamin Franklin",
+        "quoteGenre": "Morning"
+        },
+        {
+        "id": 48,
+        "quoteText": "The only place where success comes before work is in the dictionary.",
+        "quoteAuthor": "Vidal Sassoon",
+        "quoteGenre": "Motivational"
+        },
+        {
+        "id": 49,
+        "quoteText": "Sometimes you have to move on without certain people. If they're meant to be in your life, they'll catch up.",
+        "quoteAuthor": "Mandy Hale",
+        "quoteGenre": "Moving On"
+        },
+        {
+        "id": 50,
+        "quoteText": "Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.",
+        "quoteAuthor": "Plato",
+        "quoteGenre": "Music"
+        },
+        {
+        "id": 51,
+        "quoteText": "Study nature, love nature, stay close to nature. It will never fail you.",
+        "quoteAuthor": "Frank Lloyd Wright",
+        "quoteGenre": "Nature"
+        },
+        {
+        "id": 52,
+        "quoteText": "Children are not things to be molded, but are people to be unfolded.",
+        "quoteAuthor": "Jess Lair",
+        "quoteGenre": "Parenting"
+        },
+        {
+        "id": 53,
+        "quoteText": "Patience is not the ability to wait, but the ability to keep a good attitude while waiting.",
+        "quoteAuthor": "Joyce Meyer",
+        "quoteGenre": "Patience"
+        },
+        {
+        "id": 54,
+        "quoteText": "The love of one's country is a splendid thing. But why should love stop at the border?",
+        "quoteAuthor": "Pablo Casals",
+        "quoteGenre": "Patriotism"
+        },
+        {
+        "id": 55,
+        "quoteText": "Peace is not absence of conflict, it is the ability to handle conflict by peaceful means.",
+        "quoteAuthor": "Ronald Reagan",
+        "quoteGenre": "Peace"
+        },
+        {
+        "id": 56,
+        "quoteText": "Until one has loved an animal, a part of one's soul remains unawakened.",
+        "quoteAuthor": "Anatole France",
+        "quoteGenre": "Pet"
+        },
+        {
+        "id": 57,
+        "quoteText": "Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquility.",
+        "quoteAuthor": "William Wordsworth",
+        "quoteGenre": "Poetry"
+        },
+        {
+        "id": 58,
+        "quoteText": "Politics is the art of looking for trouble, finding it everywhere, diagnosing it incorrectly, and applying the wrong remedies.",
+        "quoteAuthor": "Groucho Marx",
+        "quoteGenre": "Politics"
+        },
+        {
+        "id": 59,
+        "quoteText": "Stay positive, all other choices are pointless punishments to your psyche.",
+        "quoteAuthor": "Joe Peterson",
+        "quoteGenre": "Positive"
+        },
+        {
+        "id": 60,
+        "quoteText": "The greatest power is often simple patience.",
+        "quoteAuthor": "E. Joseph Cossman",
+        "quoteGenre": "Power"
+        },
+        {
+        "id": 61,
+        "quoteText": "The most important thing in a relationship is trust.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Relationship"
+        },
+        {
+        "id": 62,
+        "quoteText": "To understand the heart and mind of a person, look not at what he has already achieved, but at what he aspires to.",
+        "quoteAuthor": "Kahlil Gibran",
+        "quoteGenre": "Respect"
+        },
+        {
+        "id": 63,
+        "quoteText": "Romance is the glamour which turns the dust of everyday life into a golden haze.",
+        "quoteAuthor": "Elinor Glyn",
+        "quoteGenre": "Romantic"
+        },
+        {
+        "id": 64,
+        "quoteText": "Tears come from the heart and not from the brain.",
+        "quoteAuthor": "Leonardo da Vinci",
+        "quoteGenre": "Sad"
+        },
+        {
+        "id": 65,
+        "quoteText": "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.",
+        "quoteAuthor": "Isaac Asimov",
+        "quoteGenre": "Science"
+        },
+        {
+        "id": 66,
+        "quoteText": "A smile is happiness you'll find right under your nose.",
+        "quoteAuthor": "Tom Wilson",
+        "quoteGenre": "Smile"
+        },
+        {
+        "id": 67,
+        "quoteText": "We are not just bystanders in society, we are society.",
+        "quoteAuthor": "Unknown",
+        "quoteGenre": "Society"
+        },
+        {
+        "id": 68,
+        "quoteText": "You miss 100% of the shots you don't take.",
+        "quoteAuthor": "Wayne Gretzky",
+        "quoteGenre": "Sports"
+        },
+        {
+        "id": 69,
+        "quoteText": "Strength does not come from physical capacity. It comes from an indomitable will.",
+        "quoteAuthor": "Mahatma Gandhi",
+        "quoteGenre": "Strength"
+        },
+        {
+        "id": 70,
+        "quoteText": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "quoteAuthor": "Winston Churchill",
+        "quoteGenre": "Success"
+        },
+        {
+        "id": 71,
+        "quoteText": "It is not what happens to you, but how you react to it that matters.",
+        "quoteAuthor": "Epictetus",
+        "quoteGenre": "Sympathy"
+        },
+        {
+        "id": 72,
+        "quoteText": "Technology is just a tool. In terms of getting the kids working together and motivating them, the teacher is the most important.",
+        "quoteAuthor": "Bill Gates",
+        "quoteGenre": "Technology"
+        },
+        {
+        "id": 73,
+        "quoteText": "Being a teenager is an amazing time and a hard time. It's when you make your best friends - I have girls who will never leave my heart and I still talk to.",
+        "quoteAuthor": "Jennifer Love Hewitt",
+        "quoteGenre": "Teen"
+        },
+        {
+        "id": 74,
+        "quoteText": "Gratitude can transform common days into thanksgivings, turn routine jobs into joy, and change ordinary opportunities into blessings.",
+        "quoteAuthor": "William Arthur Ward",
+        "quoteGenre": "Thankful"
+        },
+        {
+        "id": 75,
+        "quoteText": "The only reason for time is so that everything doesn't happen at once.",
+        "quoteAuthor": "Albert Einstein",
+        "quoteGenre": "Time"
+        },
+        {
+        "id": 76,
+        "quoteText": "The world is a book, and those who do not travel read only a page.",
+        "quoteAuthor": "Saint Augustine",
+        "quoteGenre": "Travel"
+        },
+        {
+        "id": 77,
+        "quoteText": "Trust yourself. You know more than you think you do.",
+        "quoteAuthor": "Benjamin Spock",
+        "quoteGenre": "Trust"
+        },
+        {
+        "id": 78,
+        "quoteText": "The truth is rarely pure and never simple.",
+        "quoteAuthor": "Oscar Wilde",
+        "quoteGenre": "Truth"
+        },
+        {
+        "id": 79,
+        "quoteText": "Older men declare war. But it is youth that must fight and die.",
+        "quoteAuthor": "Herbert Hoover",
+        "quoteGenre": "War"
+        },
+        {
+        "id": 80,
+        "quoteText": "A successful marriage requires falling in love many times, always with the same person.",
+        "quoteAuthor": "Mignon McLaughlin",
+        "quoteGenre": "Wedding"
+        }
+    ]
+}
