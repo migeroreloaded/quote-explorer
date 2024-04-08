@@ -1,0 +1,74 @@
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set body font family and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Search bar styles */
+#searchInput {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Dropdown styles */
+#categoryFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Main section styles */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Quote display section styles */
+#quoteDisplay {
+    max-width: 600px;
+}
+
+/* Individual quote styles */
+.quote {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.quote p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.quote span {
+    font-style: italic;
+    font-size: 1rem;
+    color: #777;
+}
