@@ -68,4 +68,55 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(genres => {
        populateGenresFilter(genres); 
     })
+
+    // Add event listener to form
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('searchInput');
+
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const searchTerm = searchInput.value.trim();
+
+        searchQuotes(searchTerm)
+            .then(filteredQuotes => {
+                // Display the filtered quotes
+                const quoteDisplay = document.getElementById('quoteDisplay');
+                quoteDisplay.innerHTML = ''; // Clear previous quotes
+
+                if (filteredQuotes.length === 0) {
+                    quoteDisplay.innerHTML = '<p>No quotes found.</p>';
+                } else {
+                    filteredQuotes.forEach(quote => {
+                        const quoteElement = document.createElement('div');
+                        quoteElement.classList.add('quote');
+                        quoteElement.innerHTML = `
+                            <p>${quote.quoteText}</p>
+                            <span>- ${quote.quoteAuthor} -</span>
+                        `;
+                        quoteDisplay.appendChild(quoteElement);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error searching quotes:', error);
+            });
+    });
+
+    // Function to search quotes based on the search term
+    function searchQuotes(searchTerm) {
+        // Fetch quotes from the API
+        return getQuotes()
+            .then(quotes => {
+                // Filter quotes based on the search term
+                const filteredQuotes = quotes.data.filter(quote => {
+                    return quote.quoteText.toLowerCase().includes(searchTerm.toLowerCase());
+                });
+                return filteredQuotes;
+            })
+            .catch(error => {
+                console.error('Error fetching quotes:', error);
+                return [];
+            });
+    }
+
 });
