@@ -125,6 +125,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 return [];
             });
     }
+    
+    // Function to toggle between light and dark themes
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-theme');
+    }
+
+    // Add event listener to the theme toggle button
+    const themeToggleBtn = document.getElementById('themeToggle');
+    themeToggleBtn.addEventListener('click', toggleDarkMode);
 
 });
   
