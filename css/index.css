@@ -155,3 +155,36 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* Like button */
+.like-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.heart {
+    width: 24px;
+    fill: #C6C6C6; /* Default color */
+    transition: fill 0.3s ease;
+}
+
+.like-btn.clicked .heart {
+    fill: #FF5757; /* Liked color */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.line {
+    border: 1px solid #cf1919;
+    margin: 10px 0;
+}
