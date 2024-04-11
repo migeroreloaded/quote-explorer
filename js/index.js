@@ -3,11 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const randomQuoteDisplay = document.getElementById('randomQuoteDisplay');
     const searchQuoteDisplay = document.getElementById('searchQuoteDisplay');
     const likedQuotesDisplay = document.getElementById('likedQuoteDisplay');
-    const viewLikedQuotesBtn = document.getElementById('viewSavedQuotesBtn');
+    //const viewLikedQuotesBtn = document.getElementById('viewSavedQuotesBtn');
     const genresFilter = document.getElementById('genresFilter');
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('searchInput');
     const themeToggleBtn = document.getElementById('themeToggle');
+    const themeToggle = document.getElementById('themeToggle');
 
     // function to fetch data from Quote Garden API
     function getQuotes() {
@@ -213,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Initialize theme based on previous choice
-    if (localStorage.getItem('dark-theme') === 'true') {
+    if (localStorage.getItem('dark-theme') === 'dark') {
         document.body.classList.add('dark-theme');
     }
 
