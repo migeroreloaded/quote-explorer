@@ -21,7 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
-    // fumction to display a random quote on the page
+     // Function to fetch genres from the API
+     function getGenres() {
+        return fetch('https://quote-garden.onrender.com/api/v3/genres')
+        .then(res => res.json())
+        .then(genres =>{
+            return genres.data
+        })
+        .catch(error => {
+             console.log('Error fetching genres:', error);
+        });
+    };
+
+    // function to display a random quote on the page
     function displayRandomQuote() {
         // Call the functionQuotes function to get quotes
         fetch('https://quote-garden.onrender.com/api/v3/quotes/random')
@@ -50,21 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
 
-    // Call the displayRandomQuote function when the page loads
-    displayRandomQuote();
-
-    // Function to fetch genres from the API
-    function getGenres() {
-        return fetch('https://quote-garden.onrender.com/api/v3/genres')
-        .then(res => res.json())
-        .then(genres =>{
-            return genres.data
-        })
-        .catch(error => {
-             console.log('Error fetching genres:', error);
-        });
-    };
-
     function populateGenresFilter(genres) {
         genres.forEach(genre => {
             const optionElement = document.createElement('option');
@@ -73,13 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
             genresFilter.appendChild(optionElement);
         });
     };
-
-
-    // Call the getGenres function when page loads
-    getGenres()
-    .then(genres => {
-       populateGenresFilter(['All genres', ...genres]); 
-    })
 
     // Add event listener to form
     searchForm.addEventListener('submit', (e) => {
@@ -218,12 +208,26 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Function to toggle between light and dark themes
     function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle('dark-theme');
+        document.body.classList.toggle('dark-theme');
+        localStorage.setItem('dark-theme', document.body.classList.contains('dark-theme')? 'dark' : 'light');
+    }
+
+    // Initialize theme based on previous choice
+    if (localStorage.getItem('dark-theme') === 'true') {
+        document.body.classList.add('dark-theme');
     }
 
     // Add event listener to the theme toggle button
     themeToggleBtn.addEventListener('click', toggleDarkMode);
+
+    // Call the displayRandomQuote function when the page loads
+    displayRandomQuote();
+
+    // Call the getGenres function when page loads
+    getGenres()
+    .then(genres => {
+       populateGenresFilter(['All genres', ...genres]); 
+    })
 
 });
   
