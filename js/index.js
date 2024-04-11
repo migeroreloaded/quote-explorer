@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+    //Display the author and text of the quote
+    const randomQuoteDisplay = document.getElementById('randomQuoteDisplay');
+    const searchQuoteDisplay = document.getElementById('searchQuoteDisplay');
+    const likedQuotesDisplay = document.getElementById('likedQuoteDisplay');
+    const viewLikedQuotesBtn = document.getElementById('viewSavedQuotesBtn');
+    const genresFilter = document.getElementById('genresFilter');
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('searchInput');
+    const themeToggleBtn = document.getElementById('themeToggle');
+
     // function to fetch data from Quote Garden API
     function getQuotes() {
         return fetch('https://quote-garden.onrender.com/api/v3/quotes')
@@ -18,10 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(res => res.json())
         .then(quotes => {
             //Get a random quote from the feched quotes
-            const randomQuote = quotes.data[0]; 
-            //Display the author and text of the quote
-            const quoteDisplay = document.getElementById('randomQuoteDisplay');
-            const heading = quoteDisplay.querySelector('h2');
+            const randomQuote = quotes.data[0];
+            const heading = randomQuoteDisplay.querySelector('h2');
             // Create a new div element to contain the quote
             const quoteElement = document.createElement('div');
             quoteElement.classList.add('quote');
@@ -30,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span>- ${randomQuote.quoteAuthor} -</span>
             `;
             // Append the quote element to the quote display section
-            quoteDisplay.innerHTML = '';
+            randomQuoteDisplay.innerHTML = '';
             // Append the <h2> element back
             if (heading) {
-                quoteDisplay.appendChild(heading);
+                randomQuoteDisplay.appendChild(heading);
             }
-            quoteDisplay.appendChild(quoteElement);
+            randomQuoteDisplay.appendChild(quoteElement);
         })
         .catch(error => {
              console.log('Error fetching random quotes:', error);
@@ -58,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     function populateGenresFilter(genres) {
-        const genresFilter = document.getElementById('genresFilter');
         genres.forEach(genre => {
             const optionElement = document.createElement('option');
             optionElement.value = genre;
@@ -75,10 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     // Add event listener to form
-    const searchForm = document.getElementById('search-form');
-    const searchInput = document.getElementById('searchInput');
-    const genresFilter = document.getElementById('genresFilter');
-
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const searchTerm = searchInput.value.trim();
@@ -87,16 +90,15 @@ document.addEventListener("DOMContentLoaded", function() {
         searchQuotes(searchTerm, selectedGenre)
             .then(filteredQuotes => {
                 // Display the filtered quotes
-                const quoteDisplay = document.getElementById('searchQuoteDisplay');
-                const heading = quoteDisplay.querySelector('h2');
-                quoteDisplay.innerHTML = ''; // Clear previous quotes
+                const heading = searchQuoteDisplay.querySelector('h2');
+                searchQuoteDisplay.innerHTML = ''; // Clear previous quotes
 
                 if (heading) {
-                    quoteDisplay.appendChild(heading);
+                    searchQuoteDisplay.appendChild(heading);
                 }
 
                 if (filteredQuotes.length === 0) {
-                    quoteDisplay.innerHTML = '<p>No quotes found.</p>';
+                    searchQuoteDisplay.innerHTML = '<p>No quotes found.</p>';
                 } else {
                     filteredQuotes.forEach(quote => {
                         const quoteElement = document.createElement('div');
@@ -106,13 +108,13 @@ document.addEventListener("DOMContentLoaded", function() {
                             <span>- ${quote.quoteAuthor} -</span>
                             <br>
                             <br>
-                            <button class="like-btn" data-id="${quote.id}">
+                            <button class="like-btn" data-id="${quote._id}">
                                 <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 28.8C15.6 28.8 15.2 28.7 14.8 28.6C9.2 26.7 0 20.6 0 9.9C0 4.5 4.5 0 9.9 0C12.7 0 15.1 1.5 16 3.8C16.9 1.5 19.3 0 22.1 0C27.5 0 32 4.5 32 9.9C32 20.6 22.8 26.7 17.2 28.6C16.8 28.7 16.4 28.8 16 28.8Z"/>
                                 </svg>
                             </button>
                         `;
-                        quoteDisplay.appendChild(quoteElement);
+                        searchQuoteDisplay.appendChild(quoteElement);
 
                         // Add event listener to the like button
                         const likeButton = quoteElement.querySelector('.like-btn');
@@ -153,25 +155,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to display liked quotes
     function displayLikedQuotes() {
         const likedQuoteIds = loadLikedQuotes();
-        const likedQuotesDisplay = document.getElementById('savedQuoteDisplay');
-        const heading = savedQuoteDisplay.querySelector('h2');
+        const heading = likedQuotesDisplay.querySelector('h2');
         likedQuotesDisplay.innerHTML = ''; // Clear previous liked quotes
 
         if (heading) {
-            savedQuoteDisplay.appendChild(heading);
+            likedQuotesDisplay.appendChild(heading);
         }
 
         if (likedQuoteIds.length === 0) {
             likedQuotesDisplay.innerHTML = '<p>No liked quotes found.</p>';
         } else {
-            fetch('../db.json')
-            .then(response => response.json())
+            getQuotes()
+            // fetch('../db.json')
+            //.then(response => response.json())
             .then(quotes => {
                 likedQuoteIds.forEach(quoteId => {
                     // Convert the quoteId to integer for comparison
-                    const id = parseInt(quoteId);
+                    const id = (quoteId);
                     // Fetch quote details from localStorage using the quoteId
-                    const savedQuote = quotes.genres.find(quote => quote.id === id);
+                    const savedQuote = quotes.data.find(quote => quote._id === id);
+                    // const savedQuote = quotes.genres.find(quote => quote.id === id);
                     if (savedQuote) {
                         const savedQuoteElement = document.createElement('div');
                         savedQuoteElement.classList.add('quote');
@@ -187,21 +190,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Event listener for the "View Liked Quotes" button
-    const viewLikedQuotesBtn = document.getElementById('viewSavedQuotesBtn');
-    viewLikedQuotesBtn.addEventListener('click', () => {
+    // viewLikedQuotesBtn.addEventListener('click', () => {
         displayLikedQuotes();
-    });
+    // });
 
     // Function to search quotes based on the search term
     function searchQuotes(searchTerm, genre) {
         // Fetch quotes from the API
-        // return getQuotes()
-        return fetch('../db.json')
-            .then(response => response.json())
+        return getQuotes()
+        // return fetch('../db.json')
+            // .then(response => response.json())
             .then(quotes => {
                 // Filter quotes based on the search term and genre
-                // let filteredQuotes = quotes.data.filter(quote => {
-                let filteredQuotes = quotes.genres.filter(quote => {
+                let filteredQuotes = quotes.data.filter(quote => {
+                // let filteredQuotes = quotes.genres.filter(quote => {
                     const matchSearchTerm = quote.quoteText.toLowerCase().includes(searchTerm.toLowerCase());
                     const matchGenre = genre === 'All genres' || quote.quoteGenre.toLowerCase() === genre.toLowerCase();
                     return matchSearchTerm && matchGenre;
@@ -221,7 +223,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Add event listener to the theme toggle button
-    const themeToggleBtn = document.getElementById('themeToggle');
     themeToggleBtn.addEventListener('click', toggleDarkMode);
 
 });
