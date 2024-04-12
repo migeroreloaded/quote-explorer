@@ -40,6 +40,9 @@ Created in **April 2022** as part of the **[Moringa School](https://moringaschoo
 ## Usage
 
 [**Demo Link**](https://quote-explorer.netlify.app/)
+
+It has been deployed using [Netlify](https://www.netlify.com/)
+
 ![Demo image](./assets/demo.png)
 
 ## Configuration
