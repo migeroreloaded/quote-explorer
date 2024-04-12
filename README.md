@@ -2,6 +2,8 @@
 
 The Quote Explorer is a web application that allows users to explore and discover quotes from a diverse collection of sources. Users can easily access a random quote displayed on the homepage each time they visit the site, search for specific quotes by entering keywords or phrases, and save liked quotes.
 
+Created in **April 2022** as part of the **[Moringa School](https://moringaschool.com/)** curriculum.
+
 ## Features
 
 - **Random Quote:** Access a random quote on the homepage each time the site is visited.
@@ -48,7 +50,7 @@ No specific configurations are needed.
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Author
+## Authors
 
 - **Migero**
 
@@ -58,6 +60,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Project Status
 
-Known issue: When a quote is liked, the love heart icon doesn't remain red.
+Known issue: When a quote is liked, the love heart icon doesn't remain red indicating it is liked.
 
 Thank you for using Quote Explorer! Let me know if there’s anything else I can help you with.
